@@ -69,7 +69,11 @@ fun Ariketa3 (modifier: Modifier = Modifier) {
             Spacer(modifier = Modifier.height(24.dp))
 
             Button (
-                onClick = { nota++ }
+                onClick = {
+                    if (nota < 10) {
+                        nota++
+                    }
+                }
             ) {
                 Text(text = "Nota igo (+1)")
             }
